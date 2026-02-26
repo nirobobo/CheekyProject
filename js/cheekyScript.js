@@ -1,14 +1,14 @@
 const character = document.getElementById('character');
 const cheek = document.getElementById('cheek-trigger');
-const countDisplay = document.getElementById('count-number'); // Lấy phần tử hiển thị số
+const countDisplay = document.getElementById('count-number');
 const bgMusic = document.getElementById('bg-music');
-let isMusicPlaying = false; // Biến đánh dấu trạng thái nhạc
+let isMusicPlaying = false;
 
-let slapCount = 0; // Biến lưu số lần tát
+let slapCount = 0;
 const slapSounds = [
-    './assets/audio/slapSound2.mp3',
-    './assets/audio/slapSound2.mp3',
-    './assets/audio/slapSound3.mp3'
+    '../assets/audio/slapSound2.mp3',
+    '../assets/audio/slapSound2.mp3',
+    '../assets/audio/slapSound3.mp3'
 ]
 
 const slapFrames = [
