@@ -12,10 +12,10 @@ const slapSounds = [
 ]
 
 const slapFrames = [
-    'assets/images/slap_1.png',
-    'assets/images/slap_2.png',
-    'assets/images/slap_3.png',
-    'assets/images/face_normal.png'
+    '../assets/images/slap_1.png',
+    '../assets/images/slap_2.png',
+    '../assets/images/slap_3.png',
+    '../assets/images/face_normal.png'
 ];
 
 let isAnimating = false;
