@@ -44,12 +44,12 @@ body {
     /* Giúp cú click xuyên qua ảnh để chạm vào cheek-trigger bên dưới */
 }
 
-/* Vùng má nhạy cảm - Bạn cần điều chỉnh top/left tùy theo ảnh của bạn */
+/* Vùng má nhạy cảm  */
 #cheek-trigger {
     position: absolute;
     /* Tọa độ */
-    top: 45%;
-    left: 44%;
+    top: 70%;
+    left: 52%;
 
     /* Kích thước vùng click */
     width: 300px;
@@ -59,7 +59,7 @@ body {
     transform: translate(-50%, -50%);
 
     /* Mẹo: Khi code, hãy bật màu lên để thấy vị trí, xong thì chỉnh lại thành 0 */
-    background: rgba(255, 0, 0, 0.3);
+    background: rgba(255, 0, 0, 0);
     border-radius: 50%;
     /* Làm vùng click hình tròn cho tự nhiên */
     cursor: pointer;

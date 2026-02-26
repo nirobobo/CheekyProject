@@ -6,10 +6,11 @@ let isMusicPlaying = false;
 
 let slapCount = 0;
 const slapFrames = [
-    '/CheekyProject/assets/images/slap_1.png',
-    '/CheekyProject/assets/images/slap_2.png',
-    '/CheekyProject/assets/images/slap_3.png',
-    '/CheekyProject/assets/images/face_normal.png'
+    '/CheekyProject/assets/images/1.png',
+    '/CheekyProject/assets/images/2.png',
+    '/CheekyProject/assets/images/3.png',
+    '/CheekyProject/assets/images/4.png',
+    '/CheekyProject/assets/images/0.png'
 ];
 
 const slapSounds = [
@@ -57,5 +58,5 @@ cheek.addEventListener('click', () => {
             clearInterval(animationInterval);
             isAnimating = false;
         }
-    }, 100); // ms
+    }, 40); // ms
 });
