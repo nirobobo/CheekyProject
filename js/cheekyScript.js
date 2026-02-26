@@ -19,6 +19,11 @@ const slapSounds = [
 ];
 let isAnimating = false;
 
+slapFrames.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+
 cheek.addEventListener('click', () => {
     //moosic
     if (!isMusicPlaying) {
@@ -52,5 +57,5 @@ cheek.addEventListener('click', () => {
             clearInterval(animationInterval);
             isAnimating = false;
         }
-    }, 30); // ms
+    }, 100); // ms
 });
