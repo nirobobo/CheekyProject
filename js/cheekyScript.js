@@ -5,17 +5,17 @@ const bgMusic = document.getElementById('bg-music');
 let isMusicPlaying = false;
 
 let slapCount = 0;
-const slapSounds = [
-    '../assets/audio/slapSound1.mp3',
-    '../assets/audio/slapSound2.mp3',
-    '../assets/audio/slapSound3.mp3'
-]
-
 const slapFrames = [
     '../assets/images/slap_1.png',
     '../assets/images/slap_2.png',
     '../assets/images/slap_3.png',
     '../assets/images/face_normal.png'
+];
+
+const slapSounds = [
+    '../assets/audio/slapSound1.mp3',
+    '../assets/audio/slapSound2.mp3',
+    '../assets/audio/slapSound3.mp3'
 ];
 
 let isAnimating = false;
