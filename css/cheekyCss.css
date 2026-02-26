@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#face-container {
+    position: relative;
+    display: inline-block;
+    /* Ngăn bôi đen (selection) */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Standard syntax */
+
+    /* Ngăn việc nắm kéo tấm ảnh đi chỗ khác (drag) */
+    -webkit-user-drag: none;
+}
+
+#character {
+    width: 100vw;
+    /* 100% chiều rộng màn hình */
+    height: 100vh;
+    /* 100% chiều cao màn hình */
+
+    /* Thuộc tính quan trọng nhất: */
+    object-fit: cover;
+
+    /* Đảm bảo ảnh luôn căn giữa khi bị cắt */
+    object-position: center;
+
+    display: block;
+
+    pointer-events: none;
+    /* Giúp cú click xuyên qua ảnh để chạm vào cheek-trigger bên dưới */
+}
+
+/* Vùng má nhạy cảm - Bạn cần điều chỉnh top/left tùy theo ảnh của bạn */
+#cheek-trigger {
+    position: absolute;
+    /* Tọa độ */
+    top: 45%;
+    left: 44%;
+
+    /* Kích thước vùng click */
+    width: 300px;
+    height: 300px;
+
+    /* Giúp tâm của vùng này nằm đúng tọa độ 45% - 55% */
+    transform: translate(-50%, -50%);
+
+    /* Mẹo: Khi code, hãy bật màu lên để thấy vị trí, xong thì chỉnh lại thành 0 */
+    background: rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+    /* Làm vùng click hình tròn cho tự nhiên */
+    cursor: pointer;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /* Chặn hoàn toàn việc xuất hiện thanh cuộn ngang và dọc */
+    overflow: hidden;
+}
+
+#counter-container {
+    position: absolute;
+    top: 30px;
+    left: 20%;
+    transform: translateX(-50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #47b5ff;
+    text-shadow: 3px 3px 0px #ffffff, 5px 5px 0px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    pointer-events: none;
+    /* Để không bị bấm nhầm vào chữ */
+    user-select: none;
+}
+
+/* Hiệu ứng hoạt ảnh khi số nhảy */
+.bump {
+    animation: bump-animation 0.1s ease-out;
+}
+
+@keyframes bump-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
