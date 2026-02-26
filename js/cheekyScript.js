@@ -58,5 +58,5 @@ cheek.addEventListener('click', () => {
             clearInterval(animationInterval);
             isAnimating = false;
         }
-    }, 40); // ms
+    }, 30); // ms
 });
